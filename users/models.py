@@ -11,6 +11,9 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username} Profile"
 
+    # allows to pass any number of params suggested when preparing for deployment
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
     def save(self):
         super().save()
 
